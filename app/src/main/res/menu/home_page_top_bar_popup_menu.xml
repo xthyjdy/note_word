@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/menugroup1" >
+        <item
+            android:id="@+id/top_bar_popap_card_interface"
+            android:title="Card Interface"
+            app:showAsAction="never"/>
+        <item android:id="@+id/top_bar_popap_list_interface"
+            android:title="List Interface"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/top_bar_popap_server_side"
+            android:title="Server Side">
+            <menu>
+                <item
+                    android:id="@+id/top_bar_popap_server_side_get_diff_notes_from_server"
+                    android:title="Get Different Notes"/>
+                <item
+                    android:id="@+id/top_bar_popap_server_side_save_diff_notes_to_server"
+                    android:title="Save Unique Notes To Remote Repository"/>
+                <item
+                    android:id="@+id/top_bar_popap_server_side_clear_server_clear_server"
+                    android:title="Clear Server"/>
+            </menu>
+        </item>
+        <item android:id="@+id/top_bar_popap_delete_all_notes"
+            android:title="Delete All Notes"
+            app:showAsAction="never"
+            android:icon="@drawable/ic_delete_forever_black_24dp"/>
+    </group>
+</menu>

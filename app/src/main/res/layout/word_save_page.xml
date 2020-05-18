@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".SaveWordActivity">
+
+    <include
+        android:id="@+id/word_save_page_top_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        layout="@layout/word_save_page_top_bar"
+        android:visibility="visible">
+    </include>
+
+    <EditText
+        android:id="@+id/et_save_page_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="20dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="top|left"
+        android:hint="@string/hint_word"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:lines="6"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:padding="20sp"/>
+
+</LinearLayout>

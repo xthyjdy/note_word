@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/lin_l_home_page_main_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Notes"
+            android:textSize="40sp"
+            android:layout_marginLeft="110dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/iv_main_top_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_menu_black_24dp"
+            android:gravity="center"
+            android:layout_weight="9"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_l_home_page_delete_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_reject_chosen"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_close_black_24dp"/>
+
+        <TextView
+            android:id="@+id/tv_count_of_chosen_items"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@id/iv_reject_chosen"
+            android:text="chosen"
+            android:layout_marginLeft="40dp"
+            android:textSize="40sp"/>
+
+        <ImageView
+            android:id="@+id/iv_chose_all_list"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_full_list_black_24dp"/>
+
+    </LinearLayout>
+</RelativeLayout>

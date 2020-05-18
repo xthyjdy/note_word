@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/menugroup1" >
+        <item
+            android:id="@+id/top_bar_popap_reminder"
+            android:title="Reminder"
+            app:showAsAction="never"/>
+        <item android:id="@+id/top_bar_popap_hide"
+            android:title="Hide"
+            app:showAsAction="never" />
+        <item android:id="@+id/top_bar_popap_fix_on_desktop"
+            android:title="Fix On Desktop"
+            app:showAsAction="never" />
+        <item android:id="@+id/top_bar_popap_move"
+            android:title="Move"
+            app:showAsAction="never" />
+        <item android:id="@+id/top_bar_popap_remove"
+            android:title="Reove"
+            android:icon="@drawable/ic_delete_forever_black_24dp"/>
+    </group>
+</menu>
