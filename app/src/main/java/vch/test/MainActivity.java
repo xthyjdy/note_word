@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     public static boolean DELETE_ITEM_STATE = false;
     public static boolean MARK_ALL_NOTES = false;
     public static boolean DELETE_CHECKED_NOTES = false;
+    public static final String UNDER_CONSTRUCTION_MESSAGE = "Event Is Under Construction";
     //default template for recycleview item
     public static int layoutManagerTemplate = R.layout.recyclerview_item;
     public LayoutInflater inflater;
@@ -215,6 +216,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.top_bar_popap_server_side_get_diff_notes_from_server:
                         wordViewModel.getRemoteWords();
                         return true;
+                    case R.id.top_bar_popap_server_side_clear_server_clear_server:
+                        showUnderConstructionMessage();
+                        return true;
                     case R.id.top_bar_popap_server_side_save_diff_notes_to_server:
                         wordViewModel.saveWordsToRemoteRepository();
                         return true;
@@ -372,5 +376,9 @@ public class MainActivity extends AppCompatActivity {
 
     public static void log(String string) {
         Log.e(LOG_TAG, String.valueOf(string));
+    }
+
+    private void showUnderConstructionMessage() {
+        Toast.makeText(this, UNDER_CONSTRUCTION_MESSAGE, Toast.LENGTH_SHORT).show();
     }
 }

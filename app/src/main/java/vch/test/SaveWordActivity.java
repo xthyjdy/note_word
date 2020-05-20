@@ -96,7 +96,19 @@ public class SaveWordActivity extends AppCompatActivity {
             }
         });
         ivStepBack = (ImageView) findViewById(R.id.iv_step_back);
+        ivStepBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showUnderConstructionMessage();
+            }
+        });
         ivStepForward = (ImageView) findViewById(R.id.iv_step_forward);
+        ivStepForward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showUnderConstructionMessage();
+            }
+        });
         ivSave = (ImageView) findViewById(R.id.iv_save);
         ivSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -144,10 +156,12 @@ public class SaveWordActivity extends AppCompatActivity {
     }
 
     private void sent() {
+        showUnderConstructionMessage();
         Log.e(MainActivity.LOG_TAG, "_sent_");
     }
 
     private void changeAppearance() {
+        showUnderConstructionMessage();
         Log.e(MainActivity.LOG_TAG, "_changeAppearance_");
     }
 
@@ -162,19 +176,24 @@ public class SaveWordActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemSelected(MenuBuilder menu, MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.top_bar_popap_reminder: // Handle option1 Click
+                    case R.id.top_bar_popap_reminder:
+                        showUnderConstructionMessage();
                         Log.e(MainActivity.LOG_TAG, "_top_bar_popap_reminder_");
                         return true;
-                    case R.id.top_bar_popap_hide: // Handle option1 Click
+                    case R.id.top_bar_popap_hide:
+                        showUnderConstructionMessage();
                         Log.e(MainActivity.LOG_TAG, "_top_bar_popap_hide_");
                         return true;
-                    case R.id.top_bar_popap_fix_on_desktop: // Handle option1 Click
+                    case R.id.top_bar_popap_fix_on_desktop:
+                        showUnderConstructionMessage();
                         Log.e(MainActivity.LOG_TAG, "_top_bar_popap_fix_on_desktop_");
                         return true;
-                    case R.id.top_bar_popap_move: // Handle option1 Click
+                    case R.id.top_bar_popap_move:
+                        showUnderConstructionMessage();
                         Log.e(MainActivity.LOG_TAG, "_top_bar_popap_move_");
                         return true;
-                    case R.id.top_bar_popap_remove: // Handle option1 Click
+                    case R.id.top_bar_popap_remove:
+                        showUnderConstructionMessage();
                         Log.e(MainActivity.LOG_TAG, "_top_bar_popap_remove_");
                         return true;
                     default:
@@ -198,5 +217,9 @@ public class SaveWordActivity extends AppCompatActivity {
             linLSavePageMainTopBar.setVisibility(View.VISIBLE);
             linLSavePageEditTopBar.setVisibility(View.GONE);
         }
+    }
+
+    private void showUnderConstructionMessage() {
+        Toast.makeText(this, MainActivity.UNDER_CONSTRUCTION_MESSAGE, Toast.LENGTH_SHORT).show();
     }
 }
